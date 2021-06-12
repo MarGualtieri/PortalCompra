@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP----------------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--JQUERY----------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/proyectos/web/tiendaJuegos/estilos.css">
+
+    <!-- JavaScript ALERTIFY -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+    <title>Mi Carrito</title>
+
+
+
+
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">PortalG</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#mapa">Ubicacion <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">Juegos</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Aventura</a>
+                    <a class="dropdown-item" href="#">Accion</a>
+                    <a class="dropdown-item" href="#">Rol</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">Inicio</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Ingrese su busqueda...">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+</nav>
+
+
+<body>
+    <div class="container" style="margin-top: 30px;">
+
+        <div id="App" class="row pt-5">
+
+            <!-- TORNEO----------------------------------------------------------->
+            <div id="formu" class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 style="text-align: center;">Anotate al Torneo 2020!</h4>
+                    </div>
+                    <form id="enviarTorneo" class="card-body">
+                        <div>
+                            <img id="imagen1" style="padding-bottom: 10px;" width="100%"
+                                src="/proyectos/carrito_de_compra/img/foto1.jpg" alt="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="nameT" placeholder="Nombre" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="price" placeholder="Edad" min="16" max="50" class="form-control"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="year" placeholder="Correo Electronico" class="form-control"
+                                required>
+                        </div>
+                        <input type="submit" value="Enviar" class="btn btn-info btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <!-- LOS ULTIMOS VIDEOJUEGOS -------------------------------->
+          
+            <div id="mas-pedidos" class="col-md-8">
+                <h2>PortalG te trae la cartelera de los mas Visitados</h2>
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3>Los ultimos Videojuegos</h3>
+                    </div>
+                    <div class="table-responsive-sm">
+                        <table class="table table-striped table-hover table-bordered table-sm ">
+                            <thead>
+                                <tr class="table-warning">
+                                    <th style="border: 1px solid black;" scope="col">#</th>
+                                    <th style="border: 1px solid black;" scope="col">Mas pedidos</th>
+                                    <th style="border: 1px solid black;" scope="col">Puntaje</th>
+                                    <th style="border: 1px solid black;" scope="col">Fecha</th>
+                                    <th style="border: 1px solid black;" scope="col">Comprar!</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th style="vertical-align: middle;" scope="row">1</th>
+                                    <td id="1" style="vertical-align: middle;">Divinity 2</td>
+                                    <td style="vertical-align: middle;">9.34</td>
+                                    <td style="vertical-align: middle;">12/05/2016</td>
+                                    <td><input id="boton1" type="button" class="btn btn-info" value="Comprar"></td>
+
+
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="vertical-align: middle;">2</th>
+                                    <td id="2" style="vertical-align: middle;">Call of Duty 9</td>
+                                    <td style="vertical-align: middle;">8.45</td>
+                                    <td style="vertical-align: middle;">23/08/2019</td>
+                                    <td><input id="boton2" type="button" class="btn btn-info" value="Comprar"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="vertical-align: middle;">3</th>
+                                    <td id="3" style="vertical-align: middle;">Walking Dead</td>
+                                    <td style="vertical-align: middle;">7.34</td>
+                                    <td style="vertical-align: middle;">05/03/2018</td>
+                                    <td id="boton" style="vertical-align: middle;">
+                                        <input id="boton3" type="button" class="btn btn-info" value="Comprar">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="vertical-align: middle;">4</th>
+                                    <td id="4" style="vertical-align: middle;" value="The Witcher 3">The Witcher 3</td>
+                                    <td style="vertical-align: middle;">9.56</td>
+                                    <td style="vertical-align: middle;">12/08/2015</td>
+                                    <td><input id="boton4" type="button" class="btn btn-info" value="Comprar"></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" style="vertical-align: middle;">5</th>
+                                    <td id="5" style="vertical-align: middle;">FIFA 2020</td>
+                                    <td style="vertical-align: middle;">8.67</td>
+                                    <td style="vertical-align: middle;">19/03/2020</td>
+                                    <td><input id="boton5" type="button" class="btn btn-info" value="Comprar"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <!-- RECOMENDADOS -------------------------------->
+
+        <div class="recomendados" style="padding-top: 20px;">
+            <h4>Recomendados</h4>
+            <div class="row ">
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3  d-flex justify-content-center">
+                    <img style="padding-bottom: 5px;" src="/proyectos/carrito_de_compra/img/01.png" width="100%" alt="">
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 col-lg-43 col-xl-3  d-flex justify-content-center">
+                    <img style="padding-bottom: 5px;" src="/proyectos/carrito_de_compra/img/02.png" width="100%" alt="">
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3  d-flex justify-content-center">
+                    <img style="padding-bottom: 5px;" src="/proyectos/carrito_de_compra/img/03.png" width="100%" alt="">
+                </div>
+                <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3  d-flex justify-content-center">
+                    <img style="padding-bottom: 5px;" src="/proyectos/carrito_de_compra/img/04.png" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- MAPA -------------------------------->
+        <div class="row" style="padding-top: 30px;">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  d-flex justify-content-center">
+                <iframe id="mapa"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6572.72507126445!2d-58.476382255885504!3d-34.544375175711124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6a2970ee3bf%3A0x7cad614b0635304b!2sAv.%20Cabildo%204500%2C%20C1429ABP%20CABA!5e0!3m2!1sen!2sar!4v1609808886950!5m2!1sen!2sar"
+                    width="600" height="450" frameborder="1" style="border:1;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  d-flex justify-content-center">
+                <div class="  text-center ">
+
+                    <h3 style="padding-top: 15px;">NOS ENCONTRAMOS EN: </h3>
+                    <H4>Capital Federal - Barrio de Nuñez</H4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, quas minima? Magnam qui
+                        quos assumenda sed dolorem laborum officiis nostrum veniam. Amet numquam eligendi, perferendis
+                        explicabo ratione illo dolore consectetur!</p>
+                    <img src="/proyectos/web/tiendaJuegos/img/tienda.jpg" width="100%" alt="">
+                </div>
+
+            </div>
+        </div>
+        <!-- FORMULARIO -------------------------------->
+        <div class="container" id="contacto">
+            <h2 class="text-center" style="padding-top: 30px;">Gracias por visitar PortalG</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 pb-5">
+
+
+                    <!--Form with header-->
+
+                    <form id="contact">
+                        <div class="card border-primary rounded-0">
+                            <div class="card-header p-0">
+                                <div class="bg-info text-white text-center py-2">
+                                    <h3><i class="fa fa-envelope"></i> Contactanos</h3>
+                                    <p class="m-0">Con gusto te ayudaremos</p>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+
+                                <!--Body-->
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control" id="nameF" name="nombre"
+                                            placeholder="Nombre y Apellido" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                        </div>
+                                        <input type="email" class="form-control" id="nombre" name="email"
+                                            placeholder="ejemplo@gmail.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                        </div>
+                                        <textarea class="form-control" placeholder="Envianos tu Mensaje"
+                                            required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <input type="submit" value="Enviar" class="btn btn-info btn-block rounded-0 py-2">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <!--Form with header-->
+
+
+                </div>
+            </div>
+        </div>
+        <!-- cierre final -------------------------------->
+
+    </div>
+ <!-- FOOTER -------------------------------->
+    <footer>
+        <div class="container-fluid  text-white text-center py-2"
+            style="background-color: rgb(49, 47, 47); height:200px;">
+            <h4>No dejes de Visitarnos</h4>
+            <p>en nuestras redes</p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-md-3 col-lg-3 col-xl-3  d-flex justify-content-center"
+                    style="margin-bottom: 10px;">
+                    <img width="50px" height="50px" style="margin-right: 5px;"
+                        src="/proyectos/web/tiendaJuegos/img/red1.png" alt="">
+                    <img width="50px" height="50px" style="margin-right: 5px;"
+                        src="/proyectos/web/tiendaJuegos/img/red2.png" alt="">
+                    <img width="50px" height="50px" style="margin-right: 5px;"
+                        src="/proyectos/web/tiendaJuegos/img/red3.png" alt="">
+                    <img width="50px" height="50px" style="margin-right: 5px;"
+                        src="/proyectos/web/tiendaJuegos/img/red4.png" alt="">
+                </div>
+            </div>
+
+            <p>Horarios de Lunes a Viernes de 9 a 18 hs</p>
+        </div>
+    </footer>
+
+
+</body>
+<script src="/proyectos/web/tiendaJuegos/javascript.js"></script>
+
+</html>

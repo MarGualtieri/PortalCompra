@@ -1,0 +1,36 @@
+
+
+#App{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+   background-color: rgb(255, 255, 255);
+}
+#product-list{
+    justify-content: center;
+    display: flex;
+    align-items: center;  
+    margin-top: 20px;
+}
+iframe{
+    border: 2px solid rgb(12, 38, 187);
+    margin-top: 20px;
+    
+}
+
+
+
+@media screen and (max-width: 500px) {
+    tbody,thead,#boton1,#boton2,#boton3,#boton4,#boton5 {
+font-size: 12px;
+
+    }
+   
+}
+    
+    
+    
+
+
+
+
